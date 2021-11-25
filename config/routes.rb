@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "password_resets#edit"
   patch "password/reset/edit", to: "password_resets#update"
 
+  get "auth/twitter/callback", to:"omniauth_callbacks#twitter"
 
   # localhost:3000 link to become the main. Can be done by get "", to:"main#index" or can be done as seen below
   root to:"main#index"
